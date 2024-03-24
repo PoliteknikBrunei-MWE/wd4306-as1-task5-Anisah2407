@@ -1,20 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>places</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button> </ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="discover">
-        <ion-label>Discover</ion-label>
-        <ion-icon name="search"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="offers">
-        <ion-label>Offers</ion-label>
-        <ion-icon name="card"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-</ion-content>
+  <ion-content class="ion-padding">
+    <ion-segment value="default">
+      <ion-segment-button value="default">
+        <ion-label>Default</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="segment">
+        <ion-label>Segment</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <br />
+    <ion-card>
+      <img
+        alt="Silhouette of mountains"
+        src="https://th.bing.com/th/id/R.1a71122ad3b0995b27eaf0c7c9821a22?rik=%2fx2dga3NP7g72Q&riu=http%3a%2f%2fstatic.thousandwonders.net%2fMount.Bromo.original.17604.jpg&ehk=LAQX6iynG6Eccpeq3HtYPLW1tQbNPIS0dloZjqS3CAM%3d&risl=&pid=ImgRaw&r=0"
+      />
+    </ion-card>
+    <br />
+    <ion-button expand="block">Place 1</ion-button>
+    <ion-button expand="block">Place 2</ion-button>
+    <ion-button expand="block">Place 3</ion-button>
+    <br />
+  </ion-content>
+</div>
