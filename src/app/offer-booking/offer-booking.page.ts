@@ -8,13 +8,10 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './offer-booking.page.html',
   styleUrls: ['./offer-booking.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule],
 })
 export class OfferBookingPage implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
