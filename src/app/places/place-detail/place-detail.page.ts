@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { addIcons } from 'ionicons';
-import { cart } from 'ionicons/icons';
 
 @Component({
   selector: 'app-place-detail',
@@ -13,11 +11,14 @@ import { cart } from 'ionicons/icons';
   imports: [IonicModule, CommonModule, FormsModule],
 })
 export class PlaceDetailPage implements OnInit {
-  constructor() {
-    addIcons({
-      cart,
-    });
-  }
+  constructor() {}
 
   ngOnInit() {}
+
+  isBookModel = false;
+  isEditModel = false;
+
+  setOpen(isOpen: boolean) {
+    this.isBookModel = isOpen;
+  }
 }

@@ -1,35 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>place-detail</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">place-detail</ion-title>
+      <ion-title>place-detail</ion-title>cd
+      <ion-buttons slot="primary">
+        <ion-button fill="outline">
+          Edit
+          <ion-icon slot="end" name="create"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-modal [isOpen]="isEditModel">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Modal</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="setOpen(false)">Close</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <p>Edit Modal</p>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
     </ion-toolbar>
   </ion-header>
-
   <ion-card>
-    <ion-card-content
-      ><ion-img src="assets/img/water-village.jpg" alt="Image"></ion-img>
-    </ion-card-content>
+    <img
+      alt="Silhouette of mountains"
+      src="https://th.bing.com/th/id/R.1a71122ad3b0995b27eaf0c7c9821a22?rik=%2fx2dga3NP7g72Q&riu=http%3a%2f%2fstatic.thousandwonders.net%2fMount.Bromo.original.17604.jpg&ehk=LAQX6iynG6Eccpeq3HtYPLW1tQbNPIS0dloZjqS3CAM%3d&risl=&pid=ImgRaw&r=0"
+    />
   </ion-card>
-
-  <ion-grid>
-    <ion-row class="ion-justify-content-center">
-      <ion-col>
-        <ion-text color="primary" style="text-align: center">
-          <h1>Brunei Darussalam</h1>
-        </ion-text>
-      </ion-col>
-    </ion-row>
-    <ion-row class="ion-justify-content-center">
-      <ion-button>
-        <ion-icon slot="start" name="cart"></ion-icon>
-        Book
-      </ion-button>
-    </ion-row>
-  </ion-grid>
+  <!--  -->
+  <ion-text class="ion-text-center">
+    <h3>Mount Bromo</h3>
+  </ion-text>
+  <!--  -->
+  <ion-button expand="block" (click)="setOpen(true)">Book</ion-button>
+  <ion-modal [isOpen]="isBookModel">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <p>Booking</p>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>
+<br />
